@@ -1,5 +1,5 @@
-import sys
 # Crea un algoritmo que convierta grados Celsius a Fahrenheit
+import sys
 
 
 def celciusToFahrenheit(celcius=0.0):
