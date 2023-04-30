@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from src.Ejercicio_6 import celciusToFahrenheit as converCtoF
 from src.Ejercicio_17 import aleatorio as aleatorio
 from src.Ejercicio_17 import adivinaNumero
+from src.Ejercicio_16 import *
 app = Flask(__name__, template_folder="templates")
 
 
@@ -28,7 +29,7 @@ def celciusToFahrenheit():
 @app.route('/Ejercicio_17', methods=['GET'])
 def Ejercicio_17():
     random = aleatorio()
-    mensaje = "¡Que empiece el juego jeje!"
+    mensaje = "¡Que empiece el juego!"
     return render_template('Ejercicio_17.html', r=random, m=mensaje)
 
 
@@ -38,6 +39,22 @@ def advinar():
     numero = int(request.form["adivinar"])
     mensaje = adivinaNumero(random, numero)
     return render_template('Ejercicio_17.html', r=random, m=mensaje)
+
+
+@app.route('/Ejercicio_16', methods=['GET'])
+def Ejercicio_16():
+    numeros = ""
+    media = ""
+    return render_template('Ejercicio_16.html', m=media, n=numeros)
+
+
+@app.route('/Ejercicio_16', methods=['POST'])
+def aritmetica():
+    numeros = stringToList(str(request.form["numeros"]))
+    numeros = listStrToFloat(numeros)
+    media = float(mediaAritmetica(numeros))
+    numeros = ', '.join(str(i) for i in numeros)
+    return render_template('Ejercicio_16.html', m=media, n=numeros)
 
 
 if __name__ == "__main__":
