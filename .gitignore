@@ -137,6 +137,7 @@ env.bak/
 venv.bak/
 .BBDD3.11
 BBDD3.11/
+BBDD3.11/bin
 
 # Spyder project settings
 .spyderproject
