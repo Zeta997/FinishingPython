@@ -12,11 +12,13 @@ class FirstStepsMongoDB():
                 print('2.-Subir fichero JSON.')
                 print('3.-Mostrar fichero.')
                 print('4.-Eliminar un elemento de la base de datos.')
-                print('5.-Actualizar un dato de la base de datos.')
+                print('5.-Actualizar o agregar un dato de la base de datos.')
                 print('0.-Salir')
                 inputUser=input('Elije una opcion: ')
                 self.OpcionElejida(inputUser)
-                if inputUser=='0': break
+                if inputUser=='0': 
+                    break
+                        
 
     def OpcionElejida(self,parametro):
             
@@ -75,6 +77,16 @@ class FirstStepsMongoDB():
                     inputCampoValor=input('Introduce el valor del campo que quiere actualizar o anadir: ')
                     campoActualizar={"$set": {f'{inputCampo}':int(inputCampoValor)}}
                     self.col_name.update_one(i, campoActualizar)
+            
+            elif parametro=='0':
+                self.test_client.close()
+                print('Conexion finalizada.')
+                
+            
+            
+            
+            
+
                 
             
         
