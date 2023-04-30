@@ -82,16 +82,7 @@ class FirstStepsMongoDB():
                 self.test_client.close()
                 print('Conexion finalizada.')
                 
-            
-            
-            
-            
-
-                
-            
-        
-
-        
+                  
 
 
 if __name__=='__main__':
