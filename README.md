@@ -38,8 +38,9 @@ Ejercicios de carácter puramente educativo.
 
 ## Ejercicio sobre BBDD
 Se ha creado una aplicación que genera datos de forma aleatoria que se pueden almacenar en ficheros json y subirlos a la base de datos. La aplicación consta de 2 partes:
+
 *1.-* La que genera los datos y se almacenan en un fichero.
-*2.-* La conexión con la BBDD, en este caso hemos utilizado 			mongodb ya que es mucho más versátil.  
+*2.-* La conexión con la BBDD, en este caso hemos utilizado mongodb ya que es mucho más versátil.  
 
 
 ## Ejercicio Flask
