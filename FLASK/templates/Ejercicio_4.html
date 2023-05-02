@@ -3,18 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FinishingPython</title>
+    <title>Calcula el area y perimetro de un circulo</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
     />
-    <link
-      href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
-  <body class="p-3 m-0 border-3 bd-example">
+  <body>
     <!--Offcanvas navbar-->
     <nav class="navbar bg-light fixed-top">
       <div class="container-fluid">
@@ -60,7 +57,7 @@
                 <a class="nav-link" href="/Ejercicio_16">Media aritmetica</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Ejercicio_4">Calcular area y perimetro de un circulo</a>
+                <a class="nav-link" href="#">Link</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
@@ -73,19 +70,27 @@
         </div>
       </div>
     </nav>
-    <!--body index-->
     <div class="container-fluid">
-      <h1>Bienvenido a FinishingPython</h1>
-      <div class="list-group">
-        <a href="/Ejercicio_6" class="list-group-item">
-          Convertir Centigrado a Fahrenheit
-        </a>
-        <a href="/Ejercicio_17" class="list-group-item">Adivinar numero</a>
-        <a href="/Ejercicio_16" class="list-group-item">Media aritmetica</a>
-        <a href="/Ejercicio_4" class="list-group-item">Calcular area y perimetro de un circulo</a>
-        <a href="#" class="list-group-item">A fifth link item</a>
-        <a href="#" class="list-group-item">A sixth link item</a>
+      <h1>Calcula el area y perimetro de un circulo</h1>
+      <form method="post" action="/AreaYPerimetro">
+        <div class="mb-3">
+          <label for="" class="form-label">Area</label>
+          <input type="text" id="area" name="area"/>
+        </div>
+        <div>
+          <label for="" class="form-label"> Perimetro</label>
+          <input type="text" id="perimetro" name="perimetro"/>
+        </div>       
+        <button type="submit" class="btn btn-primary">Calcular</button>
+      </form>
+      <div>
+        <img src="https://www.neurochispas.com/wp-content/uploads/2022/07/Formulas-del-perimetro-y-del-area-de-un-circulo.png" width="500" height="500"  alt="circulo">
       </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
