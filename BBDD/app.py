@@ -3,6 +3,7 @@
 #La funcion clasifica y cuenta la cantidad
 import random
 import json
+import MongoBD as mg
 class Fichero():
     
     listaElementos=list()
@@ -16,10 +17,11 @@ class Fichero():
             print('2-Recuperar lista')
             print('3-Mostrar la lista')
             print('4-Guardar la lista en fichero json')
-            print('5-Salir')
+            print('5- Servidor MongoDB')
+            print('0-Salir')
             __inputUser=input('Seleccione una opcion: ')
             self.EleccionUsuario(__inputUser)
-            if __inputUser=='5':
+            if __inputUser=='0':
                 break   
 
     def EleccionUsuario(self,parametro):
@@ -32,6 +34,9 @@ class Fichero():
         elif parametro=='4':
             self.CrearYGuardadFicheroJSON()
         elif parametro=='5':
+            conexion=mg.FirstStepsMongoDB()
+            conexion.main()
+        elif parametro=='0':
             return
         else:
             print('Elija una opcion valida.')

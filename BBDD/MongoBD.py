@@ -2,8 +2,9 @@
 
 from pymongo.mongo_client import MongoClient
 import json
+
 class FirstStepsMongoDB():
-    
+    conected=False
     def main(self):
             
             while True:
@@ -27,7 +28,7 @@ class FirstStepsMongoDB():
                 
                     #conectamos con el servidor una vez inicializado
                     self.test_client= MongoClient('mongodb://127.0.0.1:27017/')
-                    print('Conexion exitosa.')  
+                    
                     self.db=self.test_client.admin
 
                     #Asignacion de nombres para la base de datos y la coleccion
@@ -40,6 +41,8 @@ class FirstStepsMongoDB():
                     print(f'Version: ', self.db_parameters['version']) 
                     print(f'Collections:', self.test_client.list_database_names())
                     print(self.db.list_collection_names())
+                    print('Conexion exitosa.')  
+                    conected=True
                 except Exception as e:
                     print(e)    
 
@@ -79,8 +82,11 @@ class FirstStepsMongoDB():
                     self.col_name.update_one(i, campoActualizar)
             
             elif parametro=='0':
-                self.test_client.close()
-                print('Conexion finalizada.')
+                if self.conected:
+                    self.test_client.close()
+                    print('Conexion finalizada.')
+                else:
+                    return
                 
 
 
