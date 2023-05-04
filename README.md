@@ -28,10 +28,15 @@
       - `py app.py`
    
 ### Instalacion de mongodb
-- Windows
-```https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/```
--MacOS
-```https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/```
+
+*-* Windows
+
+  ```https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/```
+
+*-* MacOS
+
+  ```https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/```
+
 
 ### Colaboradores:
 
