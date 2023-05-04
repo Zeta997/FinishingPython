@@ -26,6 +26,12 @@
       - `py app.py`
     - FLASK
       - `py app.py`
+   
+### Instalacion de mongodb
+- Windows
+```https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/```
+-MacOS
+```https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/```
 
 ### Colaboradores:
 
@@ -42,6 +48,7 @@ Se ha creado una aplicación que genera datos de forma aleatoria que se pueden a
 *1.-* La que genera los datos y se almacenan en un fichero.
 
 *2.-* La conexión con la BBDD, en este caso hemos utilizado mongodb ya que es mucho más versátil.  
+
 
 
 ## Ejercicio Flask
